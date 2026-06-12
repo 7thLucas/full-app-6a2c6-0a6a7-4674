@@ -1,40 +1,85 @@
 <style>
-  .mode-landscape .sl-foundation-layout { display: flex; flex-direction: row; align-items: stretch; min-height: 100%; }
-  .mode-landscape .sl-content-panel { width: 55%; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
-  .mode-landscape .sl-visual-panel { width: 45%; min-height: 0; }
-  .mode-portrait .sl-foundation-layout { display: flex; flex-direction: column; min-height: 100%; }
-  .mode-portrait .sl-content-panel { padding: 2rem 1.5rem; }
-  .mode-portrait .sl-visual-panel { min-height: 280px; }
+  .mode-landscape .sl-body { flex-direction: row; gap: 1.5rem; }
+  .mode-portrait  .sl-body { flex-direction: column; gap: 1rem; }
+  .mode-landscape .sl-col  { width: 50%; }
+  .mode-portrait  .sl-col  { width: 100%; }
 </style>
 <section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-foundation-layout">
-    <div class="sl-content-panel">
-      <div class="flex items-center justify-between mb-4">
-        <span class="inline-block text-xs font-semibold tracking-widest uppercase" style="color:#0369a1;">Foundation</span>
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 border rounded-full" style="background-color:#0369a1; border-color:#0369a130;">
-          <span class="text-xs font-semibold" style="color:#ffffff;">Validated</span>
+  <div class="flex flex-col h-full p-12">
 
-        </span>
-      </div>
-      <h1 class="text-3xl font-bold text-slate-900 leading-tight mb-8">Expired Drug Stock &amp; Prescription Errors</h1>
-      <div class="space-y-5">
-        <div class="border-l-4 pl-4 relative" style="border-color:#F43F5E;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#E11D48;">The Problem</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Manual inventory management leads to expired medications going unnoticed, wasted stock, regulatory compliance failures, and costly prescription fulfillment errors that put patient safety at risk.</p>
-        </div>
-        <div class="border-l-4 pl-4 relative" style="border-color:#0369a1;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#0369a1;">The Solution</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Pharmacy owners struggle with manual inventory tracking, leading to expired medications sitting on shelves, wasted stock, compliance risks, and potential prescription errors that compromise patient safety.</p>
-        </div>
-        <div class="border-l-4 border-sky-500 pl-4 relative"><h2 class="text-sm font-semibold text-sky-600 uppercase tracking-wide mb-1">Target Audience</h2><p class="text-slate-700 leading-relaxed text-sm">Independent and chain pharmacy owners managing 50-500 daily prescriptions</p></div>
-        <div class="border-l-4 border-amber-500 pl-4 relative"><h2 class="text-sm font-semibold text-amber-600 uppercase tracking-wide mb-1">Personal Motivation</h2><p class="text-slate-700 leading-relaxed text-sm">Ensure patient safety, reduce waste, maintain regulatory compliance, and improve operational efficiency</p></div>
-      </div>
-      <div class="mt-6 flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Pharmacy Management</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Inventory Control</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Healthcare Compliance</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Prescription Safety</span></div>
-      <div class="mt-8"><data-attribution /></div>
+    <!-- Header -->
+    <div class="mb-7">
+      <div class="w-10 h-1 rounded mb-3" style="background:#059669;"></div>
+      <h2 class="text-3xl font-black" style="color:#0f172a;">Why This Exists</h2>
     </div>
-    <div class="sl-visual-panel relative">
-      <img src="http://localhost:8001/common/image-generation?prompt=pharmacy+worker+struggling+with+paper+records+and+cluttered+medication+shelves+with+expired+drugs&amp;keyspace=fujaofey&amp;user_id=4674" alt="visual" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent opacity-40"></div>
+
+    <!-- Two columns -->
+    <div class="sl-body flex flex-1 min-h-0">
+
+      <!-- Problem column -->
+      <div class="sl-col flex flex-col rounded-2xl p-8" style="background:#0f172a;">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="w-7 h-7 rounded-md flex items-center justify-center text-base"
+                style="background:#ef4444;">⚠</span>
+          <span class="text-xs font-bold tracking-widest uppercase" style="color:#94a3b8;">The Problem</span>
+        </div>
+        <p class="text-base font-semibold mb-5 leading-snug" style="color:#f1f5f9;">
+          Expired drugs are invisible until they're dispensed — costing money, endangering patients, and triggering audits.
+        </p>
+        <ul class="flex flex-col gap-3">
+          <li class="flex gap-3 items-start">
+            <span style="color:#ef4444; flex-shrink:0; margin-top:3px;">●</span>
+            <span class="text-sm leading-relaxed" style="color:#cbd5e1;">
+              Drugs expire silently on the shelf, creating financial write-offs and patient safety risks that only surface during an audit or incident
+            </span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span style="color:#ef4444; flex-shrink:0; margin-top:3px;">●</span>
+            <span class="text-sm leading-relaxed" style="color:#cbd5e1;">
+              Manual prescription logs are error-prone, inconsistent, and nearly impossible to search quickly during a compliance review
+            </span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span style="color:#ef4444; flex-shrink:0; margin-top:3px;">●</span>
+            <span class="text-sm leading-relaxed" style="color:#cbd5e1;">
+              Inventory blind spots cause overstock of near-expiry items alongside stockouts of needed drugs — with no early warning system
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Solution column -->
+      <div class="sl-col flex flex-col rounded-2xl p-8" style="background:#ecfdf5; border:1.5px solid #a7f3d0;">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="w-7 h-7 rounded-md flex items-center justify-center text-base font-bold"
+                style="background:#059669; color:#fff;">✓</span>
+          <span class="text-xs font-bold tracking-widest uppercase" style="color:#059669;">The Solution</span>
+        </div>
+        <p class="text-base font-semibold mb-5 leading-snug" style="color:#0f172a;">
+          One operational tool that gives pharmacy owners full visibility before problems happen — not after.
+        </p>
+        <ul class="flex flex-col gap-3">
+          <li class="flex gap-3 items-start">
+            <span style="color:#059669; flex-shrink:0; margin-top:3px;">●</span>
+            <span class="text-sm leading-relaxed" style="color:#374151;">
+              Automated expiry alerts flag at-risk batches 30, 60, and 90 days out — every drug is checked before it can slip past the date
+            </span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span style="color:#059669; flex-shrink:0; margin-top:3px;">●</span>
+            <span class="text-sm leading-relaxed" style="color:#374151;">
+              Digital prescription records capture every dispensing event accurately — searchable by patient, drug, or date in seconds
+            </span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span style="color:#059669; flex-shrink:0; margin-top:3px;">●</span>
+            <span class="text-sm leading-relaxed" style="color:#374151;">
+              Real-time inventory dashboard shows stock levels and reorder needs at a glance — no spreadsheets, no guesswork
+            </span>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
