@@ -1,0 +1,86 @@
+<style>
+  .mode-landscape .sl-grid { grid-template-columns: repeat(3, 1fr); }
+  .mode-portrait  .sl-grid { grid-template-columns: repeat(2, 1fr); }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-12">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-7">
+      <div>
+        <div class="w-10 h-1 rounded mb-3" style="background:#059669;"></div>
+        <h2 class="text-3xl font-black" style="color:#0f172a;">Core Features</h2>
+      </div>
+      <!-- Active persona chip -->
+      <span class="px-4 py-2 rounded-full text-sm font-semibold"
+            style="background:#0f172a; color:#f8fafc;">
+        💊 Pharmacy Owner
+      </span>
+    </div>
+
+    <!-- Feature grid -->
+    <div class="sl-grid grid gap-4 flex-1 min-h-0">
+
+      <!-- 1 -->
+      <div class="rounded-xl p-5 flex flex-col gap-2"
+           style="background:#f8fafc; border:1px solid #e2e8f0;">
+        <div class="text-2xl mb-1">📦</div>
+        <h3 class="font-bold text-base" style="color:#0f172a;">Drug Inventory Management</h3>
+        <p class="text-sm leading-relaxed" style="color:#64748b;">
+          Track stock levels by drug, batch, and supplier with low-stock threshold alerts to prevent stockouts.
+        </p>
+      </div>
+
+      <!-- 2 -->
+      <div class="rounded-xl p-5 flex flex-col gap-2"
+           style="background:#f0fdf4; border:1px solid #bbf7d0;">
+        <div class="text-2xl mb-1">⏱️</div>
+        <h3 class="font-bold text-base" style="color:#0f172a;">Expiry Date Tracking</h3>
+        <p class="text-sm leading-relaxed" style="color:#374151;">
+          Log expiry dates per batch. Automated alerts at 30, 60, and 90-day windows before any drug expires.
+        </p>
+      </div>
+
+      <!-- 3 -->
+      <div class="rounded-xl p-5 flex flex-col gap-2"
+           style="background:#f8fafc; border:1px solid #e2e8f0;">
+        <div class="text-2xl mb-1">📋</div>
+        <h3 class="font-bold text-base" style="color:#0f172a;">Prescription Records</h3>
+        <p class="text-sm leading-relaxed" style="color:#64748b;">
+          Log every dispensed prescription with patient, drug, dose, quantity, and pharmacist — fully searchable.
+        </p>
+      </div>
+
+      <!-- 4 -->
+      <div class="rounded-xl p-5 flex flex-col gap-2"
+           style="background:#eff6ff; border:1px solid #bfdbfe;">
+        <div class="text-2xl mb-1">📊</div>
+        <h3 class="font-bold text-base" style="color:#0f172a;">Expiry Dashboard</h3>
+        <p class="text-sm leading-relaxed" style="color:#374151;">
+          Visual overview of upcoming expirations sorted by urgency and drug category — always up to date.
+        </p>
+      </div>
+
+      <!-- 5 -->
+      <div class="rounded-xl p-5 flex flex-col gap-2"
+           style="background:#f8fafc; border:1px solid #e2e8f0;">
+        <div class="text-2xl mb-1">🔄</div>
+        <h3 class="font-bold text-base" style="color:#0f172a;">Reorder Management</h3>
+        <p class="text-sm leading-relaxed" style="color:#64748b;">
+          Auto-generate reorder lists combining low-stock alerts and near-expiry flags into one action list.
+        </p>
+      </div>
+
+      <!-- 6 -->
+      <div class="rounded-xl p-5 flex flex-col gap-2"
+           style="background:#fefce8; border:1px solid #fef08a;">
+        <div class="text-2xl mb-1">📄</div>
+        <h3 class="font-bold text-base" style="color:#0f172a;">Compliance Reports</h3>
+        <p class="text-sm leading-relaxed" style="color:#713f12;">
+          Printable summaries of inventory status and dispensing history ready for any regulatory audit.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
